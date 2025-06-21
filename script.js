@@ -370,12 +370,14 @@ let results=Array(questions.length).fill("Not Answered");
     const correct=results.filter(r=> r ==="correct").length;
     const incorrect=results.filter(r=> r ==="incorrect").length;
     const notAnswered =results.filter(r=> r==="Not Answered").length;
+    const yourScore =results.filter(r=> r==="correct").length;
 
     const resultSummary=`
     <p>   Total Questions:${total} </p>
      <p> Correct Answers:${correct}</p>  
     <p> Incorrect Answers:${incorrect}</p>
-    <p> Not Answered:${notAnswered} </p> `;
+    <p> Not Answered:${notAnswered} </p> 
+    <p> <h3>Your Score:${correct}</h3> </p> `;
 
     nextButton.innerHTML="Play Again";
     nextButton.style.display="block";
