@@ -1,0 +1,369 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background: rgba(51, 39, 39, 0.826);
+    background-size: cover;
+    /* background-position:3cqmax; */
+    background-repeat: 3px repeat;
+    transition: background-image 0.5s ease-in-out;
+    min-height: 23vh;
+    background-image: url(logo4.jpg);
+
+}
+/* .box{
+    box-shadow: 2px 2px 2px solid rgb(233, 100, 100);
+    width: 333px;
+    height: 133px;
+} */
+.app{
+      background:rgba(190, 187, 187, 0.641);  
+    /* this 0.45 makes the bg opaque */
+    width:85%;
+    max-width: 600px;
+    margin:100px auto 0;
+    border-radius: 23px;
+    padding: 40px;
+
+    position:relative;
+    z-index:1;
+}
+
+
+#helly{
+    border-bottom: 0;
+
+}
+/* for the logo/*/
+.logo{
+    display: block;
+    margin: 16px auto;
+    width:120px;
+    height: auto;
+    border-radius: 700px;
+    border-color: aqua;
+
+}
+.app h1{
+    font-size: 85px;
+    color:rgb(34, 97, 31);
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgb(26, 159, 132);
+     border-bottom: 2px solid black; 
+    padding-bottom: 30px;
+    text-align: center;
+}
+.quiz{
+    padding:20px 0;
+}
+.quiz h2{
+    font-size: 18px;
+    color:rgb(33, 32, 32);
+    font-weight: 600px;
+    font-style:normal;
+    font-style:italic;
+}
+.btn{
+    background: whitesmoke;
+    color: blue;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin:10px 0;
+    text-align: left;
+    border-radius: 5.5px;
+    box-shadow: 3px 2.5px 3px rgb(29, 67, 29);
+    cursor: pointer;
+    transition: all 0.4s;
+    
+}
+.btn:hover:not([disabled]){
+    background: rgb(195, 89, 168);
+    color: aliceblue;
+
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: rgb(97, 45, 217);
+    color: aliceblue;
+    font-weight: 300;
+    width:85px;
+    border: 70px;
+    padding:10px;
+    border-radius: 7px;
+    box-shadow: 1.5px 1.5px 1.2px rgb(23, 23, 59);
+    margin-right: 4px;
+    margin-inline: 35px;
+    display: none;
+}
+ /* #mark-btn{
+    background: rgb(107, 50, 230);
+    color: aliceblue;
+    font-weight: 300;
+    width:115px;
+    border: 70px;
+    padding:10px;
+    border-radius: 7px;
+    box-shadow: 1.5px 1.5px 1.2px rgb(23, 23, 59);
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 3px; */
+
+#previous-btn{
+    background: rgb(107, 50, 230);
+    color: aliceblue;
+    font-weight: 300;
+    width:85px;
+    border: 70px;
+    padding:10px;
+    border-radius: 7px;
+    box-shadow: 1.5px 1.5px 1.2px rgb(23, 23, 59);
+    margin-right: 5px;
+    margin-inline: 9.7px;
+    cursor: pointer;
+    display: block;
+}
+#skip-btn{
+    background: rgb(107, 50, 230);
+    color: aliceblue;
+    font-weight: 300;
+    width:85px;
+    border: 70px;
+    padding:10px;
+    border-radius: 7px;
+    box-shadow: 1.5px 1.5px 1.2px rgb(23, 23, 59);
+    margin-right: 15px;
+    margin-inline: 45px;
+    cursor: pointer;
+    display: block;
+    
+}
+#choose{
+padding: 30px 0;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+flex-wrap: wrap;
+
+}
+.correct{
+    background: rgb(20, 142, 20);
+}
+.incorrect{
+    background: rgb(201, 46, 46);
+}
+/* as i added the background image */
+
+body::before{
+    content: " ";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.4);
+    z-index:-1;
+
+}
+.inst-option{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap:15px;
+}
+
+/* button style */
+
+.inst-option .nav-btn{
+    flex:1;
+    padding: 12px 10px;
+    font-size: 16px;
+    border-radius: 7px;
+    box-shadow: 2.5px 2.5px 2.5px rgb(198, 227, 30);
+    background: rgb(27, 83, 62);
+    color: aliceblue;
+    font-weight: 300;
+    width:85px;
+    border: 70px;
+    margin-right: 5px;
+    margin-inline: 9.7px;
+    cursor: pointer;
+    display: block;
+
+}
+/* for continue btn */
+.nav-btn{
+    flex:1;
+    padding: 12px 28px;
+    padding-right: 80px;
+
+    font-size: 16px;
+    border-radius: 7px;
+    color: rgb(183, 255, 0);
+    cursor: pointer;
+    transition:  0.3s;
+    border-color:rgb(188, 211, 13,30);
+    font-style:normal;
+    background-color: rgb(22, 88, 19);
+    margin-left:12px;
+
+
+    position: relative;
+    font-weight: 23;
+
+    /* for centering & responsive ness */
+    margin:20px auto 0;
+    display: block;
+    text-align: center;
+}
+#previous-btn,#skip-btn,#next-btn{
+   margin: 0%;
+   flex: 1 1 auto;
+   max-width: 100px;
+}
+
+.continue-wrap{
+    display:block;
+    justify-content: center;
+}
+/* start hamburgur menu>>>>>>>.. */
+.navbar{
+    /* background-color: rgba(213, 219, 213, 0.284); */
+    padding: 10px 15px;
+    position: fixed;
+    z-index:100;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    right: 0;
+    width:100%;
+    top:0;
+    
+}
+.hamburger{
+    font-size: 30px;
+    color:rgb(202, 225, 51);
+    cursor: pointer;
+    display: block;
+    user-select: none;
+    padding: 2.5px 4px;
+    transition:  0.3s ease;
+
+}
+.hamburger:hover{
+    background-color: rgb(40, 109, 27);
+    border-radius: 7.8px;
+}
+/* for the sider style hamburger menu>>>> */
+.nav-menu{
+    list-style: none;
+    padding: 0%;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    background-color: rgba(146, 62, 135, 0.9);
+    position: absolute;
+    top:45px;
+    left:0;
+    right:-250px;
+    width:25px;
+    flex-direction: column;
+    box-shadow: 2.5px 2.5px 2.5px rgb(146, 166, 21);
+    z-index:1000;
+}
+.nav-menu.active{
+    display: flex;
+    right:0;
+
+}
+.nav-links{
+    color: rgb(6, 16, 9);
+    padding: 12px 18px;
+    text-decoration:none;
+    flex-direction: column;
+    width:100%;
+    font-size: 18px;
+    /* border-bottom: 1px solid #ccc; */
+}
+.nav-links:hover{
+    background-color: rgba(124, 183, 21, 0.1);
+    border-radius: 4px;
+    padding-left:4px;
+    transition: 0.3s;
+    box-shadow: 2px 2px 2px rgb(205, 205, 138);
+}
+ .menu-backdrop{
+    display: none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background: violet;
+    z-index:999;
+}
+.menu-backdrop.active{
+    display: block;
+} 
+
+
+
+
+/* for responsive ness in android */
+@media(max-width:770px){
+    .app{
+        padding:20px;
+        margin:50px auto 0;
+    }
+    .app h1{
+        font-size: 35px;
+    }
+    .quiz h2{
+        font-size:20px;
+    }
+    .btn{
+        font-size: 18px;
+        padding: 8px;
+    }
+    #choose{
+        flex-direction: column;
+        gap:10px;
+        padding:20px;
+    }
+    #previous-btn,#skip-btn,#next-btn{
+        width:100%;
+        max-width: none;
+        font-size: 18px;
+    }
+    .nav-btn{
+        margin:0 auto;
+        width:30%;
+        font-size: 15px;
+    }
+    /* for the logo */
+    .logo{
+        width:90px;
+    }
+    /* for hamburger menu>>> */
+    .nav-menu{
+        width:100%;
+        right:0;
+        top:48%;
+    }
+    .nav-links{
+        padding: 15px;
+        text-align: center;
+        font-size: 24px;
+    }
+    .hamburger{
+        font-size: 24px;
+    }
+
+}
