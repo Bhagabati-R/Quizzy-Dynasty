@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- add hamburger menu -->
+ <header>
+    <nav class="navbar">
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-links">Home</a></li>
+        <li><a href="instruction.html" class="nav-links">Instructions</a></li>
+        <li><a href="quiz.html" class="nav-links">Start</a></li>
+      </ul>
+    </nav>
+   </header>
+<!-- end of hamburger menu>>>>>> ID FOR HAMBURGER &#9776; -->
+
+
+    <div class="app">
+        
+        <h1>Instructions</h1>
+        <ul>
+            <li>
+                Each questions has 4 options & only one is correct(single correct).
+            </li>
+            <li>You can skip or goback to previous questions.</li>
+            <li>You cannot choose at multiple options.</li>
+            <li>The "Next"button will showup only after choosing an option.</li>
+            <li>There is NO negative mark for incorrect answer.</li>
+            <li>You will be awarded +1 mark for each correct answer.</li>
+        </ul>
+        <div id="choose" class="inst-option">
+            <button onclick="location.href='index.html'" class="nav-btn"> Exit </button>
+            <button onclick="location.href='quiz.html'" class="nav-btn"> Start</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
